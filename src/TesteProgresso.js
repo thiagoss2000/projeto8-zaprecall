@@ -10,7 +10,7 @@ export default function TesteProgresso(props) {
                     <h3>PUTZ!</h3>
                     <p>Ainda faltaram alguns...Mas não desanime!</p>
                     {emots.map((emot) => <img src={emot} alt="*"></img>)}
-                    <button className="restart">REINICIAR RECALL</button>
+                    <button className="restart" onClick={() => window.location.reload()}>REINICIAR RECALL</button>
                 </div>
             );
         }else{
@@ -18,9 +18,9 @@ export default function TesteProgresso(props) {
                 <div className={css}>
                     <img src="/ZapRecall-Recursos/party.png" alt="party"></img>
                     <h3>PARABÉNS!</h3>
-                    <p>Você não esqueceu de nenhum flashcard!</p>
+                    <p>Você não esqueceu de nenhum flashcard!</p> 
                     {emots.map((emot) => <img src={emot} alt="*"></img>)}
-                    <button className="restart">REINICIAR RECALL</button>
+                    <button className="restart" onClick={() => window.location.reload()}>REINICIAR RECALL</button>
                 </div>
             );
         }        

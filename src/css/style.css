@@ -125,6 +125,7 @@ h2 {
   cursor: pointer;
 }
 .virado p {
+  height: auto;
   font-family: 'Recursive';
   font-style: normal;
   font-weight: 400;
@@ -195,7 +196,22 @@ h2 {
   line-height: 14px;
   color: #333333;
 }
-/* @media (min-width: 935px) {
+.restart {
+  margin-inline: calc(50% - 62.5px);
+  width: 125px;
+  height: 24px;
+  background: #FB6B6B;
+  border-radius: 5px;
+  font-family: 'Recursive';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+@media (min-width: 635px) {
   .telaInicial {
     width: 100vw;
     height: 100vh;
@@ -205,4 +221,26 @@ h2 {
     height: 75px;
     top: calc(100vh - 75px);
   }
-} */
+  .resultado {
+    height: 162px;
+    top: calc(100vh - 162px);
+  }
+  .questoes {
+    width: 340px;
+    margin-bottom: 78px;
+  }
+  .questoes button {
+    height: 55px;
+  }
+  .virado {
+    width: 340px;
+    height: 105px;
+  }
+  .virado button {
+    width: 100px;
+    height: 30px;
+  }
+  .virado .B {
+    left: calc(50% - 50px);
+  }
+}

@@ -5,6 +5,7 @@ import Perguntas from "./Perguntas";
 import NewCard from "./NewCard";
 
 let qtdCards = 0;
+let deck = obj.deck;
 
 class Input extends React.Component {
 
@@ -15,20 +16,19 @@ class Input extends React.Component {
         };
         this.onChange = (evento) => {
             this.setState({nome: evento.target.value});
-            qtdCards = (this.state.nome);
+            qtdCards = this.state.nome;
         };
     }
     render() {
-        return <input type="number" nome="nome" placeholder="numero de cards" value={this.state.nome} min={1} onChange={this.onChange} />;
+        return <input type="number" nome="nome" placeholder="numero de cards" value={qtdCards} min={0} max={deck.length} onChange={this.onChange} />;
     }
 }
 
 export default function TelaInicial() {   
-    
-    let deck = obj.deck;
-
+    qtdCards = (qtdCards > deck.length ? deck.length : qtdCards);
+    //console.log(qtdCards);
     const cards =NewCard(qtdCards, deck);
-
+    
     const [visivel, setVisivel] = useState(false);
     if (visivel){
         return (
