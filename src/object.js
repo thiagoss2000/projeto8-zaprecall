@@ -13,7 +13,9 @@ const deck1 = [
     {Q: "O React é __", R: "uma biblioteca JavaScript para construção de interfaces"}
 ]
 
-let obj = {deck, deck1}; 
+let cards = [];
+
+let obj = {deck, deck1, cards}; 
 export default obj; 
 
 

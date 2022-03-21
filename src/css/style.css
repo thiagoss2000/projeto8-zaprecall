@@ -11,12 +11,20 @@
   justify-content: flex-start;
   overflow: auto;
 }
-
+.telaInicial input {
+  position: absolute;
+  top: 201px;
+  width: 141px;
+  height: 25px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+}
 h1 {
   position: absolute;
   width: 152px;
   height: 35px;
-  top: 155px;
+  top: 125px;
   font-family: 'Righteous';
   font-style: normal;
   font-weight: 400;
@@ -27,7 +35,7 @@ h1 {
 }
 .imgLogo {
   position: absolute;
-  top: 90px;
+  top: 60px;
   width: 55px;
   height: 65px;
 }
@@ -35,12 +43,19 @@ h1 {
   position: absolute;
   width: 141px;
   height: 31px;
-  top: 263px;
+  top: 231px;
   background: #FFFFFF;
   border: 1px solid #D70900;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Recursive';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #D70900;
 }
 
 .logoMenor {
@@ -75,6 +90,11 @@ h2 {
   border: none;
   text-align: start;
   position: relative;
+  font-family: 'Recursive';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
 }
 .questoes button img {
   position: absolute;
@@ -82,6 +102,8 @@ h2 {
   cursor: pointer;
 }
 .virado {
+  padding: 6px;
+  box-sizing: border-box;
   margin-top: 5px;
   width: 182px;
   height: 80px;
@@ -89,14 +111,6 @@ h2 {
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   position: relative;
-}
-.virado p{
-  font-family: 'Recursive';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  color: #333333;
 }
 .verde {color: #2FBE34;text-decoration: line-through;}
 .amarelo {color: #FF922E;text-decoration: line-through;}
@@ -110,12 +124,19 @@ h2 {
   right: 7px;
   cursor: pointer;
 }
+.virado p {
+  font-family: 'Recursive';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #333333;
+}
 .virado button {
   width: 55px;
   height: 24px;
   border-radius: 5px;
   border: none;
-
   font-family: 'Recursive';
   font-style: normal;
   font-weight: 400;
@@ -165,6 +186,14 @@ h2 {
 .resultado {
   height: 112px;
   top: 269px;
+}
+.resultado h3 {
+  font-family: 'Recursive';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #333333;
 }
 /* @media (min-width: 935px) {
   .telaInicial {
