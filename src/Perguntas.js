@@ -11,6 +11,7 @@ let reprovacao = false;
 let emots = [];
 
 export default function Perguntas(props) {
+    let keyC = 0;
     const {cards} = props;
     console.log(cards);
     const [card, setCard] = useState(null);
@@ -22,6 +23,7 @@ export default function Perguntas(props) {
             </div>
             <div className="questoes">
                 {cards.map ((cardA) => {
+                    keyC ++;
                     let Css;
                     switch(marcado[cards.indexOf(cardA)]) {
                         case '1a': Css = "vermelho"; break;
@@ -32,11 +34,13 @@ export default function Perguntas(props) {
                     if (card !== cards.indexOf(cardA) || Css !== "") {
                         return <Card 
                         setCard={setCard} 
+                        key={keyC}
                         nome={"Pergunta " + (cards.indexOf(cardA) +1)} 
                         card={cards.indexOf(cardA)} Css={Css} />;
                     }else{
                         return <CardVirado  
                         setCard={setCard} 
+                        key={keyC}
                         pergunta={cards[cards.indexOf(cardA)]} 
                         card={cards.indexOf(cardA)} />;
                     }
