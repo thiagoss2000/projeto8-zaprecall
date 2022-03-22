@@ -1,6 +1,5 @@
 import reactDom from "react-dom";
 import TelaInicial from "./TelaInicial";
-import Perguntas from "./Perguntas";
 
 function Conteudo() {
 

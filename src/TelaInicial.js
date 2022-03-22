@@ -1,8 +1,9 @@
 import { useState } from "react";
 import React from "react";
-import obj from "./object";
 import Perguntas from "./Perguntas";
 import NewCard from "./NewCard";
+import obj from "./object";
+import logo from "./ZapRecall-Recursos/logo.png";
 
 let qtdCards = 0;
 let deck = obj.deck;
@@ -39,7 +40,7 @@ export default function TelaInicial() {
         return(
             <div className="telaInicial">
                 <div className="imgLogo">
-                    <img src="/ZapRecall-Recursos/logo.png" alt="logo"></img>
+                    <img src={logo} alt="logo"></img>
                 </div>
                 <h1>ZapRecall</h1>
                 <Input />

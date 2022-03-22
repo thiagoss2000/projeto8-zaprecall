@@ -1,7 +1,11 @@
 import { useState } from "react";
 import Card from "./Card";
-// import CardVirado from "./CardVirado";
 import TesteProgresso from "./TesteProgresso";
+import logoPequeno from "./ZapRecall-Recursos/logo-pequeno.png"
+import setinha from "./ZapRecall-Recursos/setinha.png"
+import Vector1a from "./ZapRecall-Recursos/Vector(1a).png"
+import Vector2a from "./ZapRecall-Recursos/Vector(2a).png"
+import Vector3a from "./ZapRecall-Recursos/Vector(3a).png"
 import "./css/reset.css";
 import "./css/style.css";
 
@@ -18,7 +22,7 @@ export default function Perguntas(props) {
     return(
         <div className="telaInicial">
             <div className="logoMenor">
-                <img src="/ZapRecall-Recursos/logo-pequeno.png" alt="logo"></img>
+                <img src={logoPequeno} alt="logo"></img>
                 <h2>ZapRecall</h2>
             </div>
             <div className="questoes">
@@ -63,9 +67,9 @@ function CardVirado(props) {
         return (
             <div className="virado">
                 <p>{pergunta.R}</p>
-                <button className="A" onClick={() => {marcado[card] = "1a"; emots.push("/ZapRecall-Recursos/Vector(1a).png"); desempenho++; setCard(); reprovacao=true}}>Não lembrei</button>
-                <button className="B" onClick={() => {marcado[card] = "2a"; emots.push("/ZapRecall-Recursos/Vector(2a).png"); desempenho++; setCard()}}>Quase não lembrei</button>
-                <button className="C" onClick={() => {marcado[card] = "3a"; emots.push("/ZapRecall-Recursos/Vector(3a).png"); desempenho++; setCard()}}>Zap!</button>
+                <button className="A" onClick={() => {marcado[card] = "1a"; emots.push(Vector1a); desempenho++; setCard(); reprovacao=true}}>Não lembrei</button>
+                <button className="B" onClick={() => {marcado[card] = "2a"; emots.push(Vector2a); desempenho++; setCard()}}>Quase não lembrei</button>
+                <button className="C" onClick={() => {marcado[card] = "3a"; emots.push(Vector3a); desempenho++; setCard()}}>Zap!</button>
             </div>
         );
     }else{
@@ -73,7 +77,7 @@ function CardVirado(props) {
             <div className="virado">
                 <p>{pergunta.Q}</p>
                 <div className="virar" onClick={() => setVirar(!virar)}>
-                    <img src="/ZapRecall-Recursos/setinha.png" alt="virar"></img>
+                    <img src={setinha} alt="virar"></img>
                 </div>
             </div>
         );

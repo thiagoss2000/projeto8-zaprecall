@@ -1,3 +1,5 @@
+import party from "./ZapRecall-Recursos/party.png"
+import sad from "./ZapRecall-Recursos/sad.png"
 
 export default function TesteProgresso(props) { 
     let keyT = 0;
@@ -7,7 +9,7 @@ export default function TesteProgresso(props) {
         if (reprovacao) {
             return (
                 <div className={css}>
-                    <img src="/ZapRecall-Recursos/sad.png" alt="sad" key={'sad'}></img>
+                    <img src={sad} alt="sad" key={'sad'}></img>
                     <h3>PUTZ!</h3>
                     <p>Ainda faltaram alguns...Mas não desanime!</p>
                     {emots.map((emot) => <img src={emot} alt="*" key={keyT++}></img>)}
@@ -17,7 +19,7 @@ export default function TesteProgresso(props) {
         }else{
             return (
                 <div className={css}>
-                    <img src="/ZapRecall-Recursos/party.png" alt="party" key={'party'}></img>
+                    <img src={party} alt="party" key={'party'}></img>
                     <h3>PARABÉNS!</h3>
                     <p>Você não esqueceu de nenhum flashcard!</p> 
                     {emots.map((emot) => <img src={emot} alt="*" key={keyT++}></img>)}
